@@ -9,6 +9,7 @@
         Listed Jobs
     </div>
     <div class="listed-jobs">
+        {% if user.job %}
         {% for job  in  user.job.all %}                
             <div class="job">
                 <p class="job-title">{{job.title}}</p>
@@ -16,5 +17,8 @@
                 <a href="{% url 'job-update' job.id %}" class="btn update-job">Update</a>
             </div>
      {% endfor %}
+     {% else %}
+     <p>No Jobs Available</p>
+     {% endif %}
     </div>
 {% endblock %}
