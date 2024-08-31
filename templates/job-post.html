@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    {% if action == 'update' %}
+        <h2 class="post-update">
+            update job
+        </h2>
+    
+    {% else %}
+    <h2 class="post-update">
+        create job
+    </h2>
+    {% endif %}
+    <form action="" method="post">
+        <div id="post-job">
+            {% csrf_token %}
+            {{form}}
+            <span class="buttons">
+                
+                {% if action == 'update' %}
+                <a href="{% url 'dashboard' %}" class="btn btn-secondary" id="cancel">Cancel</a>
+                {% endif %}
+                <input type="submit" value="Submit" class="submit-btn">
+            </span>
+        </div>
+    </form>
+{% endblock %}

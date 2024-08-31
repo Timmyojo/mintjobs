@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<form action="{% url 'register' %}" method="post">
+   <div class="form-container">
+        {% csrf_token %}
+        {% for field in form %}
+           <div class="form-control">
+                <label>{{field.label}}</label>
+                {{field}}
+           </div>
+        {% endfor %}
+        <input type="submit" value="Register" class="btn btn-primary" id="login-reg-btn">
+        <p class="no-account">Already have an account? 
+            <span><a href="{% url 'login' %}">Login</a></span>
+         </p>
+   </div>
+</form>
+{% endblock %}

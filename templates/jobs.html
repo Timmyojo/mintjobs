@@ -1,0 +1,36 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    
+    <div class="jobs">
+        <div class="job-search">
+            <form method="get">
+                    <div class="filter-container">
+                        {% for field in jobfilter.form %}
+                        <div class="filter-control">
+                            <label>{{field.label}}</label>
+                            {{field}}
+                        </div>
+                        {% endfor %}
+                    </div>
+                 <div class="buttons">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                    <a href="{% url 'jobs' %}" class="btn btn-primary">Clear all filter</a>
+                 </div>
+            </form>
+         </div>
+
+        <div class="jobcount">{{jobcount}} Jobs</div>
+        {% for job in jobs %}
+            <a href="{% url  'job' job.id %}">
+                <div class="job">
+                    <p class="job-title-first">{{job.title.0}}</p>
+                    <p class="job-title">{{job.title}}</p>
+                    <p class="job-company">{{job.company}}</p>
+                    <p class="workplace">{{job.workplace}}</p>
+                    <p class="posted">Posted on: {{job.created|date}}</p>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock %}

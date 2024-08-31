@@ -1,0 +1,26 @@
+<nav>
+  <div class="container">
+    <div class="nav">
+        <a href="{% url 'home' %}">
+            <div class="logo">
+                Mint<span>Jobs</span>
+            </div>
+        </a>
+        <div>
+            <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'jobs' %}">Jobs</a>
+        <a href="{% url 'job-post' %}">Post a Job</a>
+    
+        {%  if request.user.is_authenticated %}
+            <a href="{% url 'dashboard' %}">Dashboard</a>
+            <a href="{% url 'logout' %}">Logout</a>
+    
+        {%  else %}
+            <a href="{% url 'login' %}">Login</a>
+            <a href="{% url 'register' %}">Register</a>
+        {%  endif %}
+        </div>
+    </div>
+  </div>
+
+</nav>

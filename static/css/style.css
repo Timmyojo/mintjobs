@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@300;400;500;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins, sans-serif';
+    line-height: 1.5em;
+    color: #000;
+    font-size: 14px;
+ }
+
+ h1,h2,h3,h4,h5,h6{
+     font-weight: 500;
+ }
+
+
+ a{
+     text-decoration: none;
+ }
+
+
+
+.btn{
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    background-color: rgb(204, 204, 204);
+    color: black;
+    display: block;
+    width: fit-content;
+    margin: 10px;
+    background-color: none;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+}
+
+.btn-primary{
+    background-color:#000;
+    color: #fff;
+}
+
+.btn-secondary{
+    background-color:#fff;
+    color: #000;
+    border: 2px solid #242424;
+}
+
+
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding:0 1rem ;
+}
+
+
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+nav {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+}
+
+.nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+    margin: 0 10px;
+}
+
+.no-account {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-top: 20px;
+}
+
+.no-account a{
+    color: #3aabd4;
+    font-size: 1.3rem;
+}
+
+#login-reg-btn{
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+}
+
+
+ .logo{
+     font-size: 26px;
+     font-weight: 500;
+ }
+
+ .logo span{
+     font-size: 26px;
+     font-weight: 500;
+     color: rgb(143, 224, 248);
+ }
+
+ .main {
+     margin-top: 40px;
+     padding: 0.8rem 1.5rem;
+     max-width: 100vw;
+    flex: 1;
+    align-items: center;
+ }
+
+
+.hero {
+    padding: 2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero .hero-headline{
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.hero .hero-headline span{
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: rgb(143, 224, 248);
+}
+
+
+.hero-subline{
+    max-width: 800px;
+    font-size: 1.6rem;
+    margin-top: 1.5rem;
+
+}
+
+.hero-img{
+    width: 40%;
+
+}
+
+.call-to-action {
+    margin-top: 20px;
+    display: flex;
+}
+
+.call-to-action a {
+    font-size: 1.5rem;
+}
+
+/* Dashboard */
+
+.welcome {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.welcome span{
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard-headline {
+    padding-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.listed-jobs {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+.listed-jobs .job{
+    width: 300px;
+    max-width: 100%;
+}
+
+.listed-jobs .update-job {
+    float: right;
+    margin-top: 10px;
+}
+
+#single-job {
+    padding-inline: 2rem;
+}
+
+#single-job .top {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#single-job .top .company{
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #6d6c6c;
+}
+
+#single-job .top .title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+#single-job .mid .posted,
+#single-job .mid .type,
+#single-job .mid .role,
+#single-job .mid .workplace,
+#single-job .mid .level{
+    color: #6d6c6c;
+    font-size: 1.3rem;
+}
+
+#single-job .mid span{
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #252525;
+}
+
+#single-job .description .headline{
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+#single-job #apply-btn{
+    margin: 0 auto;
+    margin-block: 40px;
+}
+
+
+.job-search {
+    margin-bottom: 60px;
+}
+
+.job-search .filter-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.job-search .filter-control{
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.job-search .buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.jobs {
+    width: 100%;
+    max-width: 700px;
+    margin:  0 auto;
+}
+
+.jobcount {
+    font-size: 1.7rem;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+.job{
+    width: 100%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.job .job-title-first{
+    float: right;
+    box-shadow: 2px 8px 10px rgba(15, 179, 230, 0.1);
+    width: fit-content;
+    max-width: 600px;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.job .job-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.job .job-company {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #6d6c6c;
+    text-transform: capitalize;
+}
+
+.job .workplace,
+.job .posted  {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #6d6c6c;
+}
+
+.job .posted {
+    color: #000;
+
+}
+
+#all-job {
+    margin: 30px auto;
+}
+
+.single-job .top {
+    display: flex;
+}
+
+.why-us {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.why-us .why-text {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.why-us .why-text .why-lists {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.why-us .why-list {
+    box-shadow: 2px 8px 20px rgba(15, 179, 230, 0.1);
+    width: fit-content;
+    max-width: 600px;
+    padding: 40px;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.why-us .num {
+    position: absolute;
+    top: -10%;
+    left: 40%;
+    background-color: #f4f4f4;
+    width: fit-content;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 50%;
+}
+
+.why-us .top {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.why-us .bottom {
+    padding-top: 20px;
+    font-size: 1.5rem;
+}
+
+.form-container{
+    max-width: 564px;
+    margin: 0 auto;
+    border:1px solid rgb(218, 218, 218);
+    padding: 45px 50px;
+    border-radius: 5px;
+}
+
+#post-job div{
+    max-width: 564px;
+    margin-block: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#post-job .buttons{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+}
+
+#post-job .buttons .submit-btn{
+    width: 50%;
+    border-radius: 5px;
+}
+
+#post-job .buttons #cancel{
+    width: 50%;
+
+}
+
+
+
+#post-job div input{
+    width: 100%;
+    height: 40px;
+}
+
+#post-job input{
+    width: 100%;
+    height: 40px;
+}
+
+#post-job label{
+  line-height: 30px;
+  font-weight: 400; 
+}
+
+#post-job select{
+    width: 25%;
+    height: 40px;
+  }
+
+#post-job label{
+line-height: 30px;
+font-weight: 400; 
+}
+
+label.required::after{
+    content: ' *';
+    color: red;
+}
+
+
+  .form-control input{
+      width: 100%;
+      height: 40px;
+  }
+
+  .form-control label{
+    line-height: 30px;
+    font-weight: 400; 
+  }
+
+  .submit-btn{
+    background-color: #000000;
+    color:white;
+    border:none;
+    width: 100%;
+    margin-left: 0px;
+    height: 40px;
+    margin-bottom: 33px;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  footer {
+    background-color: #f5f5f5;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+
+ @media (max-width:800px) {
+    .hero {
+        padding: 1rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }    
+    .hero-img {
+        display: none;
+    }
+
+    .call-to-action a {
+        font-size: 1.2rem;
+    }
+    
+}
+
+@media (max-width:600px) {
+
+    .hero .hero-headline{
+        font-size: 1.5rem;
+    }
+
+    .hero-subline{
+        font-size: 1.3rem;
+    
+    }
+
+    .why-us .why-list {
+        margin-bottom: 50px;
+    }
+
+}

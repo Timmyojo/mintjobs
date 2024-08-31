@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <div class="welcome">
+        Welcome, <span>{{user.username}}</span>
+    </div>
+
+    <div class="dashboard-headline">
+        Listed Jobs
+    </div>
+    <div class="listed-jobs">
+        {% for job  in  user.job.all %}                
+            <div class="job">
+                <p class="job-title">{{job.title}}</p>
+                <p class="posted">Posted on: {{job.created|date}}</p>
+                <a href="{% url 'job-update' job.id %}" class="btn update-job">Update</a>
+            </div>
+     {% endfor %}
+    </div>
+{% endblock %}

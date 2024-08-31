@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <form action="" method="post">
+        <div class="form-container">
+            {% csrf_token %}
+            {% if request.GET.next %}
+            <input type="hidden" name="next" value="{{request.GET.next}}">
+            {% endif %}
+            <div class="form-control">
+                <label for="">Email:</label>
+                <input type="email" name="email">
+            </div>
+            <div class="form-control">
+                <label for="">Password:</label>
+                <input type="password" name="password">
+            </div>
+            <input type="submit" value="Login" class="btn btn-primary" id="login-reg-btn">
+
+            <p class="no-account">Don't hane an account yet? 
+                <span><a href="{% url 'register' %}">Register</a></span>
+            </p>
+        </div>
+    </form>
+{% endblock %}

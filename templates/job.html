@@ -1,0 +1,52 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <div id="single-job">
+        <div class="top">
+            <p class="company">
+                {{job.company}}
+            </p>
+            <p class="title">
+                {{job.title}}
+            </p>
+        </div>
+
+        <div class="mid">
+            <p class="posted">
+                <span>Date Posted: </span>
+                {{job.created|date}}
+
+            </p>
+            <p class="type">
+                <span>Job Type: </span>
+                {{job.jobtype}}
+
+            </p>
+            <p class="role">
+                <span>Job Role: </span>
+                {{job.title}}
+
+            </p>
+            <p class="workplace">
+                <span>Workplace Type: </span>
+                {{job.workplace}}
+
+            </p>
+            <p class="level">
+                <span>Job Level: </span>
+                {{job.level}}
+
+            </p>
+        </div>
+        <div class="description">
+            <p class="headline">Job Description</p>
+            <div class="content">
+                {{job.description}}
+
+            </div>
+        </div>
+        <a class="btn btn-primary" id="apply-btn" href="{{job.link}}" target="_blank">
+            Apply for this position
+        </a>
+    </div>
+{% endblock %}

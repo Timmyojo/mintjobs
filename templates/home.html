@@ -1,0 +1,60 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block content %}
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-headline">Unlock Your Next <span>Career</span> Move With MintJobs</p>
+                <p class="hero-subline">
+                    Join thousands of job seekers and recruiters who trust MintJobs to match the right talent with the right opportunity.
+                </p>
+            </div>
+            <div class="call-to-action">
+                <a href="{% url 'jobs' %}" class="btn btn-primary">Find Jobs</a>
+                <a href="{% url 'job-post' %}" class="btn btn-secondary">Post a Job</a>
+            </span>
+        </div>
+    </div>
+    <img src="{% static 'images/jobs.svg' %}" alt="" class="hero-img"/>
+    </section>
+
+    <section class="why-us">
+        <div class="why-text">
+            Why MintJobs
+        </div>
+        <div class="why-lists">
+            <div class="why-list">
+                <p class="num">1</p>
+                <p class="top">Find job</p>
+                <p class="bottom">Search for jobs from available listing with advance filtering options</p>
+            </div>
+            <div class="why-list">
+                <p class="num">2</p>
+                <p class="top">Apply for Job</p>
+                <p class="bottom">Apply for jobs thats best suit your skillset and offer unparallel growth opportunities</p>
+            </div>
+            <div class="why-list">
+                <p class="num">3</p>
+                <p class="top">Get a Job</p>
+                <p class="bottom">Receive offer letter from reputable comapnies and organization for career growth</p>
+            </div>
+        </div>
+    </section>
+
+   <section class="jobs">
+        {% for job  in  jobs %}
+        <a href="{% url  'job' job.id %}">
+        <div class="job">
+            <p class="job-title-first">{{job.title.0}}</p>
+                    <p class="job-title">{{job.title}}</p>
+                    <p class="job-company">{{job.company}}</p>
+                    <p class="workplace">{{job.workplace}}</p>
+                    <p class="posted">Posted on: {{job.created|date}}</p>
+        </div>
+        </a>
+    {% endfor %}
+    <a class="btn btn-primary" id="all-job" href="{% url 'jobs' %}">View all Jobs</a>
+   </section>
+{% endblock %}
