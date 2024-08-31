@@ -55,7 +55,7 @@ def logout_user(request):
 
 @login_not_required
 def home_page(request):
-    jobs = Job.objects.all()
+    jobs = Job.objects.filter(featured=True)
 
     context = {'jobs':jobs}
     return render(request, 'home.html', context)

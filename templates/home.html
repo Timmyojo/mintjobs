@@ -47,7 +47,7 @@
         {% for job  in  jobs %}
         <a href="{% url  'job' job.id %}">
         <div class="job">
-            <p class="job-title-first">{{job.title.0}}</p>
+            <p class="job-title-first">{{job.company.0}}</p>
                     <p class="job-title">{{job.title}}</p>
                     <p class="job-company">{{job.company}}</p>
                     <p class="workplace">{{job.workplace}}</p>
